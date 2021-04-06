@@ -31,7 +31,7 @@ N = int(fFile.readline())
 dictPlace = {}
 for _ in range(N):
     x, y, place = fFile.readline().split(" ")
-    dictPlace[_] = [float(x[:-1]), float(y[:-1]), place[:-1]]
+    dictPlace[_] = [float(x), float(y), place[:-1]]
 
 adjMat = []
 for line in fFile.readlines():
