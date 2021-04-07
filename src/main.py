@@ -95,7 +95,7 @@ print("jalurnya adalah:")
 for i in jalur:
     print (coordinate[i][2])
 
-
+k = input("\nTekan sembarang key untuk keluar")
 
 
 
