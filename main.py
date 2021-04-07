@@ -37,9 +37,12 @@ adjMat = []
 for line in fFile.readlines():
     adjMat.append([float(x) for x in line.split(" ")])
 
-print(dictPlace)
-print(adjMat)
+#print(adjMat)
 
+#menampilkan indeks, koordinat dari tiap simpul
+print("indeks, data simpul (x, y, nama simpul")
+for i in dictPlace:
+    print(i, ": ",  dictPlace[i])
 
 ###################################################
 
@@ -77,7 +80,7 @@ while (not stop):
         print("tidak ada jalur yang menghubungkan asal dan tujuan")
 
     #step 3, ambil node yang paling kecil, masukin ke simpul Tutup
-    else:
+    else: 
         t = simpulBuka.get()
         print("ksadkfjadkfasd", t)
         #step 4, jika ujung jalur merupakan simpul tujuan, maka selesai. ambil jarak dan jalurnya
@@ -100,7 +103,11 @@ while (not stop):
                     simpulBuka.put((nilai, a)) #ekspansi simpul terbuka
 
 print("\nJarak terpendek adalah: ", jarak)
-print("jalurnya adalah: ", jalur)
+print('')
+print("jalurnya adalah:")
+
+for i in jalur:
+    print (coordinate[i][2])
 
 
 
