@@ -40,7 +40,7 @@ for line in fFile.readlines():
 #print(adjMat)
 
 #menampilkan indeks, koordinat dari tiap simpul
-print("indeks, data simpul (x, y, nama simpul")
+print("indeks, data simpul (x, y, nama simpul)")
 for i in dictPlace:
     print(i, ": ",  dictPlace[i])
 
@@ -51,9 +51,9 @@ coordinate = dictPlace
 matriksKetetanggaan = adjMat
 
 
-# masukkan indeks kota asal
+# masukkan indeks kota asal (diasumsikan input sesuai, tidak ada yang diluar indeks yang diberikan)
 asal = int(input("masukkan indeks tempat asal: "))
-# masukkan indeks kota tujuan
+# masukkan indeks kota tujuan (diasumsikan input sesuai, tidak ada yang diluar indeks yang diberikan)
 tujuan = int(input("masukkan indeks tempat tujuan: "))
 
 #hitung jarak garis lurus dari setiap kota ke kota tujuan dan simpan di sebuah array
@@ -82,7 +82,7 @@ while (not stop):
     #step 3, ambil node yang paling kecil, masukin ke simpul Tutup
     else: 
         t = simpulBuka.get()
-        print("ksadkfjadkfasd", t)
+        #print("Proses: ", t) #jika ingin melihat prosesnya
         #step 4, jika ujung jalur merupakan simpul tujuan, maka selesai. ambil jarak dan jalurnya
         if(t[1][len(t[1])-1]== tujuan):
             stop = True
@@ -100,7 +100,7 @@ while (not stop):
                 if (matriksKetetanggaan[i][ujungjalur] != 0): #merupakan anak jika mempunyai jarak dengan ujung jalur
                     a.append(i)
                     nilai = t[0] - jarakLurusSetiapTempatKeTujuan[ujungjalur] + matriksKetetanggaan[i][ujungjalur] +  jarakLurusSetiapTempatKeTujuan[i]
-                    simpulBuka.put((nilai, a)) #ekspansi simpul terbuka
+                    simpulBuka.put((nilai, a)) # step 6, ekspansi simpul terbuka
 
 print("\nJarak terpendek adalah: ", jarak)
 print('')
