@@ -1,17 +1,3 @@
-# A*
-'''
-- Sebuah bilangan N menyatakan banyak simpul
-- N buah koordinat setiap simpul dan nama setiap simpul
-- Adjacency Matrix berukuran N x N
-
-'''
-'''
-2
-3 4 Medan
-28 8 Baubau
-0 3
-3 0
-'''
 from queue import PriorityQueue
 
 #fungsi fungsi
@@ -102,7 +88,7 @@ while (not stop):
                     nilai = t[0] - jarakLurusSetiapTempatKeTujuan[ujungjalur] + matriksKetetanggaan[i][ujungjalur] +  jarakLurusSetiapTempatKeTujuan[i]
                     simpulBuka.put((nilai, a)) # step 6, ekspansi simpul terbuka
 
-print("\nJarak terpendek adalah: ", jarak)
+print("\nJarak terpendek adalah: ", jarak, " meter")
 print('')
 print("jalurnya adalah:")
 
